@@ -39,6 +39,8 @@ then
 else
     echo "Docker 已安装。"
 fi
+# 升级gclib
+echo "deb http://th.archive.ubuntu.com/ubuntu jammy main" | sudo tee /etc/apt/sources.list && sudo apt-get update && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y libc6
 
 #获取运行文件
 read -p "请输入你的key device id: " your_device_id
